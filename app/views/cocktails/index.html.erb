@@ -1,7 +1,12 @@
-<h1>My Cocktails</h1>
+<div class="banner">
+  <h1>Jonny's Crazy Cocktails </h1>
+</div>
 
-<% @cocktails.each do |cocktail| %>
+<div class="container">
+  <h2>My cocktails</h2>
+  <% @cocktails.each do |cocktail| %>
 
-  <%= cocktail.name %>
+    <%= cocktail.name %>
 
-<% end %>
+  <% end %>
+</div>

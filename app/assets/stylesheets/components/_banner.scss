@@ -1,0 +1,12 @@
+.banner {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), asset-url('banner-bg.jpg');
+  background-size: cover;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 48px;
+    color: white;
+  }
+}
