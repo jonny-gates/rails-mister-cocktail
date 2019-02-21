@@ -23,7 +23,7 @@ class CocktailsController < ApplicationController
   private
 
   def set_cocktail
-    @cocktail = Cocktail.find[params[:id]]
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def cocktail_params
