@@ -1,23 +1,24 @@
-<div class="banner">
-  <h1>Jonny's Crazy Cocktails </h1>
-</div>
 
-<div class="container">
+
+<div class="container my-6">
   <h2>My cocktails</h2>
-  <% @cocktails.each do |cocktail| %>
+  <div class="cocktails-grid">
+    <% @cocktails.each do |cocktail| %>
 
-  <div class="card">
-    <div class="card-head">
-      <h3><%= cocktail.name %></h3>
+    <div class="card">
+      <div class="card-head" style="background: url('https://images.unsplash.com/photo-1541975902628-b157a9411603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'">
+        <h3><%= cocktail.name %></h3>
+      </div>
+      <div class="card-ingredients">
+        <p>Ingredients</p>
+        <% cocktail.ingredients.each do |ingredient| %>
+          <span><%= ingredient.name %></span>
+        <% end %>
+      </div>
+      <div class="card-actions">
+        <%= link_to "View", cocktail_path(cocktail) %>
+      </div>
     </div>
-    <div class="card-ingredients">
-      <% cocktail.ingredients.each do |ingredient| %>
-        <span><%= ingredient.name %></span>
-      <% end %>
-    </div>
-    <div class="card-actions">
-      <%= link_to "View", cocktail_path(cocktail) %>
-    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
