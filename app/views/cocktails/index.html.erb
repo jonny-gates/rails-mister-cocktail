@@ -1,7 +1,9 @@
 
 
 <div class="container my-6">
+  <%= link_to "+ ", new_cocktail_path, class: 'btn btn-primary btn-circle btn-offset' %>
   <h2>My cocktails</h2>
+  <p id="typer"></p>
   <div class="cocktails-grid">
     <% @cocktails.each do |cocktail| %>
 
