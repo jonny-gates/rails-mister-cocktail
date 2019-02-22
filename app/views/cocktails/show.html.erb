@@ -7,4 +7,10 @@
   <% end %>
   <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %>
   <%= link_to "Back to cocktails", root_path %>
+
+  <h2>Reviews</h2>
+  <% @cocktail.reviews.each do |review| %>
+    <p><strong><%= '*' * review.rating %></strong> | <%= review.content %></p>
+  <% end %>
+  <%= link_to "Add a review", new_cocktail_review_path(@cocktail) %>
 </div>
